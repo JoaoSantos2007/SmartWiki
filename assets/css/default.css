@@ -1,16 +1,1 @@
-html::selection, body::selection, div::selection, span::selection, applet::selection, object::selection, iframe::selection,
-h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, blockquote::selection, pre::selection,
-a::selection, abbr::selection, acronym::selection, address::selection, big::selection, cite::selection, code::selection,
-del::selection, dfn::selection, em::selection, img::selection, ins::selection, kbd::selection, q::selection, s::selection, samp::selection,
-small::selection, strike::selection, strong::selection, sub::selection, sup::selection, tt::selection, var::selection,
-b::selection, u::selection, i::selection, center::selection,
-dl::selection, dt::selection, dd::selection, ol::selection, ul::selection, li::selection,
-fieldset::selection, form::selection, label::selection, legend::selection,
-table::selection, caption::selection, tbody::selection, tfoot::selection, thead::selection, tr::selection, th::selection, td::selection,
-article::selection, aside::selection, canvas::selection, details::selection, embed::selection, 
-figure::selection, figcaption::selection, footer::selection, header::selection, hgroup::selection, 
-menu::selection, nav::selection, output::selection, ruby::selection, section::selection, summary::selection,
-time::selection, mark::selection, audio::selection, video::selection, br::selection {
-    color: white;
-    background-color: #111111;
-}
+a::selection,abbr::selection,acronym::selection,address::selection,applet::selection,article::selection,aside::selection,audio::selection,b::selection,big::selection,blockquote::selection,body::selection,br::selection,canvas::selection,caption::selection,center::selection,cite::selection,code::selection,dd::selection,del::selection,details::selection,dfn::selection,div::selection,dl::selection,dt::selection,em::selection,embed::selection,fieldset::selection,figcaption::selection,figure::selection,footer::selection,form::selection,h1::selection,h2::selection,h3::selection,h4::selection,h5::selection,h6::selection,header::selection,hgroup::selection,html::selection,i::selection,iframe::selection,img::selection,ins::selection,kbd::selection,label::selection,legend::selection,li::selection,mark::selection,menu::selection,nav::selection,object::selection,ol::selection,output::selection,p::selection,pre::selection,q::selection,ruby::selection,s::selection,samp::selection,section::selection,small::selection,span::selection,strike::selection,strong::selection,sub::selection,summary::selection,sup::selection,table::selection,tbody::selection,td::selection,tfoot::selection,th::selection,thead::selection,time::selection,tr::selection,tt::selection,u::selection,ul::selection,var::selection,video::selection{color:#fff;background-color:#111}
