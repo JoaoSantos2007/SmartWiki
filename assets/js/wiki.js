@@ -6,32 +6,32 @@ const navigate = (id) => {
     location.assign(path);
 };
 
-const createCard = (id) => {
+const createCardElement = () => {
     const card = document.createElement("div");
-    card.classList.add("col-xxl-4", "col-md-6", "d-flex", "justify-content-center");
-    card.onclick = function() {
-        navigate(id);
-    };
+    card.classList.add("col","col-xl-4", "col-md-6", "d-flex", "justify-content-center", "align-items-center");
 
     return card;
 };
 
-const createInnerCard = () => {
+const createInnerCardElement = (id) => {
     const innerCard = document.createElement("div");
     innerCard.classList.add("card", "h-100", "myCardStyle");
-    innerCard.style.width = "18rem";
+    innerCard.style.width = "286px";
+    innerCard.onclick = function() {
+        navigate(id);
+    };
 
     return innerCard;
 };
 
-const createCardBody = () => {
+const createCardBodyElement = () => {
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
 
     return cardBody;
 };
 
-const createCardImg = (id, url, name) => {
+const createCardImgElement = (id, url, name) => {
     const image = document.createElement("img");
     image.classList.add("card-img-top", "img-fluid");
     image.style.cssText = `
@@ -47,7 +47,7 @@ const createCardImg = (id, url, name) => {
     return image;
 };
 
-const createCardText = (name) => {
+const createCardTextElement = (name) => {
     const cardText = document.createElement("p");
     cardText.classList.add("card-text");
     cardText.textContent = name;
@@ -65,15 +65,14 @@ async function renderCards() {
         for (let index = 0; index < docs.length; index++) {
         const { id, name, url, texts } = docs[index];
 
-        const card = createCard(id);
-        const innerCard = createInnerCard();
-        const image = createCardImg(id, url, name);
-        const cardBody = createCardBody();
-        const cardText = createCardText(name);
+        const card = createCardElement();
+        const innerCard = createInnerCardElement(id);
+        const image = createCardImgElement(id, url, name);
+        const cardBody = createCardBodyElement();
+        const cardText = createCardTextElement(name);
 
         cardBody.append(cardText);
-        innerCard.append(image);
-        innerCard.append(cardBody);
+        innerCard.append(image, cardBody);
         card.append(innerCard);
         cardsContainer.append(card);
         }

@@ -6,25 +6,25 @@ const navigate = (id) => {
   location.assign(docPath);
 };
 
-const createCard = (id) => {
+const createCardElement = () => {
   const card = document.createElement("div");
-  card.classList.add("col-xxl-3", "col-md-4", "d-flex", "justify-content-center");
-  card.onclick = function() {
-    navigate(id);
-  };
+  card.classList.add("col", "col-xl-3", "col-md-4", "d-flex", "justify-content-center");
 
   return card;
 };
 
-const createInnerCard = () => {
+const createInnerCardElement = (id) => {
   const innerCard = document.createElement("div");
   innerCard.classList.add("card", "h-100", "myCardStyle");
   innerCard.style.width = "14rem";
+  innerCard.onclick = function() {
+    navigate(id);
+  };
 
   return innerCard;
 };
 
-const createCardImg = (id, url, name) => {
+const createCardImgElement = (id, url, name) => {
   const image = document.createElement("img");
   image.classList.add("card-img-top", "img-fluid");
   image.style.cssText = `
@@ -40,7 +40,7 @@ const createCardImg = (id, url, name) => {
   return image;
 };
 
-const createCardBody = () => {
+const createCardBodyElement = () => {
   const cardBody = document.createElement("div");
   cardBody.classList.add("card-body");
 
@@ -73,17 +73,15 @@ async function renderCards() {
     for (let index = 0; index < products.length; index++) {
       const { id, price, name, summary } = products[index];
 
-      const card = createCard(id);
-      const cardBody = createCardBody();
-      const image = createCardImg(id, url, name);
-      const innerCard = createInnerCard();
+      const card = createCardElement();
+      const cardBody = createCardBodyElement();
+      const image = createCardImgElement(id, url, name);
+      const innerCard = createInnerCardElement(id);
       const priceElement = createPriceElement(price);
       const summaryElement = createSummaryElement(summary);
 
-      cardBody.append(priceElement);
-      cardBody.append(summaryElement);
-      innerCard.append(image);
-      innerCard.append(cardBody);
+      cardBody.append(priceElement, summaryElement);
+      innerCard.append(image, cardBody);
       card.append(innerCard);
       cardsContainer.append(card);
     }

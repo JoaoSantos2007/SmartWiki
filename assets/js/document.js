@@ -1,48 +1,81 @@
-function getQueryParams() {
-  const query = window.location.search
+const url = location.href.substring(0, location.href.lastIndexOf("/"));
+const imgPath = `${url}/assets/img/docs`;
 
-  var params = {};
-  var queryString = query.slice(1).split('&');
-  for(var i = 0; i < queryString.length; i++){
-    var param = queryString[i].split('=');
-    var key = decodeURIComponent(param[0]);
-    var value = decodeURIComponent(param[1] || '');
+const getQueryParams = () => {
+  const query = location.search;
+
+  const params = {};
+  const queryString = query.slice(1).split('&');
+  for (const param of queryString) {
+    const [key, value = ''] = decodeURIComponent(param).split('=');
     if (key.length) {
       params[key] = value;
     }
   }
   return params;
-}
-  
-async function renderDoc(){
-  try{
-    const res = await fetch("assets/json/docs.json")
-    const docs = await res.json()
+};
 
-    const params = getQueryParams()
-    const id = params.id
-    const url = window.location.href.substring(0, window.location.href.lastIndexOf("/"));
-    const path = `${url}/assets/img/docs`;
+const createTitleElement = (name) => {
+  const docTitle = document.createElement("h1");
+  docTitle.classList.add("text-center", "my-5");
+  docTitle.textContent = name;
 
-    const doc = docs[id-1]
+  return docTitle;
+};
 
-    const docTitle = window.document.querySelector("#doc_title");
-    docTitle.innerText = doc.name;
+const createImgElement = (id) => {
+  return new Promise((resolve, reject) => {
+    const docImg = document.createElement("img");
+    docImg.classList.add("mb-5", "img-fluid");
+    docImg.style.cssText = `
+      width: 100%;
+      height: 100%;
+    `;
+    docImg.srcset = `
+      ${imgPath}/320/image${id}.avif 320w,
+      ${imgPath}/480/image${id}.avif 480w,
+      ${imgPath}/768/image${id}.avif 768w,
+      ${imgPath}/992/image${id}.avif 992w,
+      ${imgPath}/1200/image${id}.avif 1200w
+    `;
 
-    const docImg = window.document.querySelector("#doc_img");
-    docImg.setAttribute("srcset", `
-        ${path}/320/image${doc.id}.avif 320w,    
-        ${path}/480/image${doc.id}.avif 480w,    
-        ${path}/768/image${doc.id}.avif 768w,    
-        ${path}/992/image${doc.id}.avif 992w,    
-        ${path}/1200/image${doc.id}.avif 1200w    
-    `);
+    docImg.onload = () => resolve(docImg);
+    docImg.onerror = reject;
+  });
+};
 
-    const docBody = window.document.querySelector("#doc_body");
-    docBody.innerHTML += `<p>${doc.texts.join("</p><p>")}</p>`;
-  }catch(err){
-    console.error(err)
+const createTextsElement = (texts) => {
+  const divTexts = document.createElement("div");
+
+  for (const textContent of texts) {
+    const text = document.createElement("p");
+    text.textContent = textContent;
+
+    divTexts.append(text);
   }
-}
+
+  return divTexts;
+};
+
+const renderDoc = async () => {
+  try {
+    const res = await fetch("assets/json/docs.json");
+    const docs = await res.json();
+
+    const params = getQueryParams();
+    const paramId = params.id;
+
+    const doc = document.querySelector("#doc");
+    const { name, texts, id } = docs[paramId - 1];
+
+    const docTitle = createTitleElement(name);
+    const docImg = await createImgElement(id);
+    const docTexts = createTextsElement(texts);
+
+    doc.append(docTitle, docImg, docTexts);
+  } catch (err) {
+    console.error(err);
+  }
+};
 
 window.addEventListener("load", renderDoc);
