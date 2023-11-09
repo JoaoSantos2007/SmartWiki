@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "To Kill a Mockingbird",
+    "img": "https://m.media-amazon.com/images/I/71FxgtFKcQL._SY466_.jpg",
+    "download_url": "https://www.raio.org/TKMFullText.pdf"
+  },
+  {
+    "id": 2,
+    "name": "1984",
+    "img": "https://m.media-amazon.com/images/I/61M9jDcsl2L._SY466_.jpg",
+    "download_url": "https://www.planetebook.com/free-ebooks/1984.pdf"
+  },
+  {
+    "id": 3,
+    "name": "Linux Bible",
+    "img": "https://m.media-amazon.com/images/I/81MkbfWZeZL._SY466_.jpg",
+    "download_url": "https://udaygade.files.wordpress.com/2015/04/linux-bible-by-christopher-negus.pdf"
+  },
+  {
+    "id": 4,
+    "name": "Brave New World",
+    "img": "https://m.media-amazon.com/images/I/91D4YvdC0dL._SY466_.jpg",
+    "download_url": "https://ia800306.us.archive.org/24/items/ost-english-brave_new_world_aldous_huxley/Brave_New_World_Aldous_Huxley.pdf"
+  },
+  {
+    "id": 5,
+    "name": "The Catcher in the Rye",
+    "img": "https://m.media-amazon.com/images/I/91HPG31dTwL._SY466_.jpg",
+    "download_url": "https://ia803102.us.archive.org/0/items/1_20191103_20191103_1326/1.pdf"
+  },
+  {
+    "id": 6,
+    "name": "Lord of the Flies",
+    "img": "https://m.media-amazon.com/images/I/813iPfHCY1L._SY466_.jpg",
+    "download_url": "https://d2ct263enury6r.cloudfront.net/X2bpH13Xnjn4ZJspWQzb5LMu7BGp5CUGaPGFQqVXvLT2M1AW.pdf"
+  },
+  {
+    "id": 7,
+    "name": "Pride and Prejudice",
+    "img": "https://m.media-amazon.com/images/I/71cf1cKjsIS._SY466_.jpg",
+    "download_url": "http://www.dominiopublico.gov.br/download/texto/gu001342.pdf"
+  },
+  {
+    "id": 8,
+    "name": "The Hobbit",
+    "img": "https://m.media-amazon.com/images/I/91M9xPIf10L._SY466_.jpg",
+    "download_url": "https://ddcus.org/pdf/summer_reading/10th_Grade/O%20Hobbit%20-%20J_%20R_%20R_%20Tolkien%20-%20BEAP%2010%20Portuguese.pdf"
+  },
+  {
+    "id": 9,
+    "name": "The Lord of the Rings",
+    "img": "https://m.media-amazon.com/images/I/51t0Z0DfEfL._SY466_.jpg",
+    "download_url": "https://ia601003.us.archive.org/3/items/j-r-r-tolkien-lord-of-the-rings-01-the-fellowship-of-the-ring-retail-pdf/j-r-r-tolkien-lord-of-the-rings-01-the-fellowship-of-the-ring-retail-pdf.pdf"
+  },
+  {
+    "id": 10,
+    "name": "Harry Potter and the Sorcerer's Stone",
+    "img": "https://m.media-amazon.com/images/I/81iqZ2HHD-L._SY466_.jpg",
+    "download_url": "https://kalyankrishna4886.files.wordpress.com/2013/09/harry-potter-book-collection-1-4.pdf"
+  },
+  {
+    "id": 11,
+    "name": "The Hunger Games",
+    "img": "https://m.media-amazon.com/images/I/61IixzhezrL._SY466_.jpg",
+    "download_url": "https://www.deyeshigh.co.uk/downloads/literacy/world_book_day/the_hunger_games_-_trilogy.pdf"
+  },
+  {
+    "id": 12,
+    "name": "The Da Vinci Code",
+    "img": "https://m.media-amazon.com/images/I/91QSDmqQdaL._SY466_.jpg",
+    "download_url": "https://www-di.inf.puc-rio.br/~furtado/davinci_lacy.pdf"
+  },
+  {
+    "id": 13,
+    "name": "The Chronicles of Narnia",
+    "img": "https://m.media-amazon.com/images/I/71szrqzf22L._SY466_.jpg",
+    "download_url": "http://mscerdasenglish.weebly.com/uploads/8/3/7/2/83721436/chronicles_of_narnia-_magicians_nephew_by_c.s.lewis.pdf"
+  },
+  {
+    "id": 14,
+    "name": "The Shining",
+    "img": "https://m.media-amazon.com/images/I/81QckmGleYL._SY466_.jpg",
+    "download_url": "https://ia801400.us.archive.org/2/items/the-shining-by-stephen-king-1977/The-Shining.pdf"
+  },
+  {
+    "id": 15,
+    "name": "A Song of Ice and Fire",
+    "img": "https://m.media-amazon.com/images/I/51jkk1s1wcL._SX342_SY445_.jpg",
+    "download_url": "https://books-library.net/files/books-library.online-01052042Lx2L3.pdf"
+  },
+  {
+    "id": 16,
+    "name": "The Hitchhiker's Guide to the Galaxy",
+    "img": "https://m.media-amazon.com/images/I/81XSN3hA5gL._SY466_.jpg",
+    "download_url": "https://www.deyeshigh.co.uk/downloads/literacy/world_book_day/the_hitchhiker_s_guide_to_the_galaxy.pdf"
+  },
+  {
+    "id": 17,
+    "name": "The Alchemist",
+    "img": "https://m.media-amazon.com/images/I/71h2Cp+305L._SY466_.jpg",
+    "download_url": "https://ia601006.us.archive.org/13/items/OceanofPDF.comTheAlchemist/_OceanofPDF.com_The_Alchemist.pdf"
+  },
+  {
+    "id": 18,
+    "name": "The Girl with the Dragon Tattoo",
+    "img": "https://m.media-amazon.com/images/I/81UhKOBDrCL._SY466_.jpg",
+    "download_url": "https://ebooknoid.files.wordpress.com/2012/01/the_girl_with_the_dragon_tattoo.pdf"
+  },
+  {
+    "id": 19,
+    "name": "The Fault in Our Stars",
+    "img": "https://m.media-amazon.com/images/I/81a4kCNuH+L._SY466_.jpg",
+    "download_url": "https://books-library.net/files/books-library.online-12292230Vr3R6.pdf"
+  },
+  {
+    "id": 20,
+    "name": "The Road",
+    "img": "https://m.media-amazon.com/images/I/71IJ1HC2a3L._SY466_.jpg",
+    "download_url": "https://mrsfieldstchs.weebly.com/uploads/3/7/7/1/37719247/the_road_-_text.pdf"
+  }
+]

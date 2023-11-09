@@ -8,6 +8,18 @@
         <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/default.css">
+        
+        <style>
+            .myCardStyle{
+                cursor: pointer;
+            }
+
+            .myCardStyle:hover {    
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+                transform: translateY(-5px);
+                transition: all 0.3s ease-in-out;
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg" style="background-color: #000;" data-bs-theme="dark">
@@ -29,7 +41,14 @@
             </div>
         </nav>
 
-        <section class="container d-flex flex-column align-items-center mb-5" id="productSection"></section>
+        <header>
+            <h1 class="text-center my-5">Explore o Mundo dos Ebooks</h1>
+        </header>
+
+        <main>
+            <section class="container row g-5 mx-auto" id="cardsContainer"></section>
+        </main>
+        
 
         <footer class="d-flex flex-row justify-content-between align-items-center bg-black w-100 p-4 mt-5">
             <div class="d-flex flex-row align-items-center">
@@ -42,8 +61,8 @@
                 <img src="assets/img/facebook.svg" width="18px" height="18px" class="me-3" alt="" role="button">
             </div>
         </footer>
-
-        <script src="assets/js/product.js"></script>
+        
+        <script src="assets/js/ebook.js"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
